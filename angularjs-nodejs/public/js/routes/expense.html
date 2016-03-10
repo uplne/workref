@@ -1,0 +1,19 @@
+<div class="grid__item">
+	<h2>Expense <span class="headingsinfo">Your expense</span></h2>
+</div>
+<div class="grid__item">
+	<div class="grid u-boxOrder">
+		<div class="grid__item grid-half m-g-full u-boxOrder-2">
+			<sa:Tablevariable><h3>Variable expense<span class="headings--right">{{date}}</span></h3></sa:Tablevariable>
+			<sa:Tablefixed><h3>Fixed expense<span class="headings--right">All</span></h3></sa:Tablefixed>
+		</div>
+		<div class="grid__item grid-half m-g-full u-boxOrder-1">
+			<div class="grid">
+				<sa:Total type="monthly" data="items.totals.monthly">This month</sa:Total>
+				<sa:Total type="yearly" data="items.totals.yearly">This year</sa:Total>
+				<sa:Graphrecent graph-title="expense monthly" chart-data="monthlyTotals" chart-totals="items.totals.yearly.total"></sa:Graphrecent>
+				<sa:Graphdoughnut graph-title="expense distribution" chart-data="items.all" chart-totals="items.totals.monthly"></sa:Graphdoughnut>
+			</div>
+		</div>
+	</div>
+</div>

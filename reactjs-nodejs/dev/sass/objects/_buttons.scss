@@ -1,0 +1,149 @@
+$btn-icon-size--small: $default-spacing-unit * 1.3;
+$btn-icon-size--large: $default-spacing-unit * 1.6;
+$btn-padding--default: $default-spacing-unit / 3 + 1;
+$btn-padding--xsmall: $default-spacing-unit / 9;
+$btn-padding--small: $default-spacing-unit / 5;
+$btn-padding--large: $default-spacing-unit / 2;
+
+.btn,
+%btn {
+	padding: $btn-padding--default $btn-padding--default * 2;
+	box-sizing: border-box;
+	position: relative;
+	background-color: #fff;
+	border-color: $brand-border;
+	color: #fff;
+	vertical-align: middle;
+	border-radius: 2px;
+
+	&:hover {
+		//background-color: $brand-light-active;
+		//border-color: $brand-light-border-active;
+	}
+}
+
+.btn--xsmall {
+	@include font-size(14px, 1);
+
+	padding: $btn-padding--xsmall $btn-padding--xsmall * 2;
+}
+
+.btn--small {
+	@include font-size(14px);
+
+	padding: $btn-padding--small $btn-padding--small * 2;
+}
+
+.btn--large {
+	@include font-size(20px);
+
+	padding: $btn-padding--large $btn-padding--large * 2;
+}
+
+.btn--primary {
+	@include font-size(16px);
+
+	color: #fff;
+	background-color: $brand-secondary;
+	transition: 500ms ease;
+	border: 1px solid $brand-secondary;
+
+	&:hover {
+		background-color: darken($brand-secondary, 5%);
+	}
+}
+
+.btn--icon {
+	background-color: transparent;
+
+	svg {
+		height: 65%;
+		fill: #fff;
+		transition: background easeIn 250ms;
+		vertical-align: bottom;
+	}
+
+	&:hover {
+		background-color: transparent;
+
+		svg {
+			fill: $brand-primary;
+		}
+	}
+}
+
+.btn--ui {
+	width: $btn-icon-size--small;
+	height: $btn-icon-size--small;
+	padding: 0;
+	border: 0;
+}
+
+.btn--uilarge {
+	@extend %btn--pill;
+
+	width: $btn-icon-size--large;
+	height: $btn-icon-size--large;
+	padding: 0;
+	background-color: #fff;
+	border: 1px solid $brand-border;
+	box-sizing: content-box;
+
+	svg {
+		fill: $brand-primary;
+		vertical-align: middle;
+	}
+
+	&:hover {
+		background-color: $brand-primary;
+		border: 1px solid $brand-border;
+
+		svg {
+			fill: #fff;
+		}
+	}
+
+	&.is-disabled {
+		border-color: grey;
+		transition: none;
+
+		svg,
+		:hover & {
+			fill: grey;
+			background-color: #fff;
+		}
+	}
+}
+
+.btn__linkWrap {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.btn--link {
+	line-height: 2.5;
+}
+
+// 1, 2. Because border on btn affects abs positioning
+.btn__ripple {
+	@extend %btn--pill;
+
+	position: absolute;
+	top: -1px;  // [1]
+	left: -1px; // [2]
+	width: $btn-icon-size--large;
+	height: $btn-icon-size--large;
+	background: black;//$brand-primary-active;
+	opacity: 0;
+
+
+	animation: ripple-animation 500ms;
+}
+
+.btn__text {
+	@include font-size(17px);
+
+	margin-left: .5em;
+	vertical-align: inherit;
+}

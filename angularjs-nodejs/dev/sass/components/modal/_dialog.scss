@@ -1,0 +1,21 @@
+.dialog {
+	width: 25em;
+	margin: 20% auto 0 auto;
+	background-color: #fff;
+	border-radius: $btn-radius;
+	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .05);
+}
+
+.dialog__heading {
+	@include font-size(27px);
+
+	margin: 0;
+	color: $brand-primary;
+}
+
+.dialog__info {
+	@include font-size(15px, 1.2);
+
+	padding-bottom: $default-spacing-unit;
+	color: $text-light;
+}

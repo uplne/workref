@@ -1,0 +1,28 @@
+.footer {
+	width: 100%;
+	margin-top: $default-spacing-unit * 4;
+	text-align: center;
+}
+
+.footer__nav {
+	width: $base-w;
+	margin: 0 auto;
+
+	@include mq($until: $mobile-landscape-w) {
+		width: auto;
+	}
+}
+
+.footer__link {
+	@include font-size(14px);
+
+	display: inline-block;
+	margin: 19px 0 0 $default-spacing-unit / 2;
+	text-decoration: none;
+	padding: $default-spacing-unit / 3 $default-spacing-unit / 2;
+	color: $text-primary;
+
+	@include mq($until: $mobile-landscape-w) {
+		margin: 0 0 0 $default-spacing-unit / 2;
+	}
+}

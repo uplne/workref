@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <% include ../partials/header %>
+    <body class="body">
+    	<% include ../partials/page-header %>
+    	<div class="container">
+    		<h1>Amortization Schedule Calculator</h1>
+    		<div id="amortization-calculator"><%- reactOutput %></div>
+    	</div>
+    	<script src="<%= assets %>/jspm_packages/system.js"></script>
+        <script src="<%= assets %>/config.js"></script>
+        <script>
+            System.import('apps/amortization/amortization-schedule-calculator');
+        </script>
+        <script>
+            window._initialState = <%- initialState %>;
+        </script>
+		<% include ../partials/footer-scripts %>
+	</body>
+</html>

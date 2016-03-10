@@ -1,0 +1,41 @@
+<div class="box box--styled">
+	<ng:transclude></ng:transclude>
+	<div class="results" ng:show="items.all.variable!='undefined' && items.all.variable.length">
+		<div class="results__inner" ng:repeat="item in items.all.variable | orderBy : '-created' : reverse | filter: actualMonth">
+			<p class="results__date">{{item.created | date : 'EEE dd MMM'}}</p>
+			<div class="results__box">
+				<p class="results__value">{{item.value}}</p>
+			</div>
+			<div class="results__box u-m-hide">
+				<p class="u-ellipsis">{{item.title}}</p>
+			</div>
+			<div class="results__box result__box--category">
+				<p class="u-ellipsis">{{item.category}}</p>
+			</div>
+			<div class="results__box results__box--ui">
+				<sa:Buttonuismall action="editData(item)" title="Edit {{stateTitle}}">
+					<svg x="0px" y="0px" viewBox="0 0 512 512">
+						<path d="M448,177.14V448c0,35.344-28.656,64-64,64H64c-35.344,0-64-28.656-64-64V128c0-35.344,28.656-64,64-64h270.844l-63.969,64
+							H64v320h320V241.156L448,177.14z M398.875,45.25L376.25,67.875l67.875,67.891l22.625-22.625L398.875,45.25z M444.125,0
+							L421.5,22.625l67.875,67.891L512,67.875L444.125,0z M150,294.188l67.875,67.875L421.5,158.406l-67.875-67.891L150,294.188z
+							 M128,384h64l-64-64V384z"/>
+					</svg>
+				</sa:Buttonuismall>
+				<sa:Buttonuismall action="removeData(item, $index)" title="Remove {{stateTitle}}">
+					<svg x="0px" y="0px" viewBox="0 0 268.476 268.476">
+						<path d="M63.119,250.254c0,0,3.999,18.222,24.583,18.222h93.072
+						c20.583,0,24.582-18.222,24.582-18.222l18.374-178.66H44.746L63.119,250.254z M170.035,98.442c0-4.943,4.006-8.949,8.949-8.949
+						c4.943,0,8.95,4.006,8.95,8.949l-8.95,134.238c0,4.943-4.007,8.949-8.949,8.949c-4.942,0-8.949-4.007-8.949-8.949L170.035,98.442z
+						 M125.289,98.442c0-4.943,4.007-8.949,8.949-8.949c4.943,0,8.949,4.006,8.949,8.949v134.238c0,4.943-4.006,8.949-8.949,8.949
+						c-4.943,0-8.949-4.007-8.949-8.949V98.442z M89.492,89.492c4.943,0,8.949,4.006,8.949,8.949l8.95,134.238
+						c0,4.943-4.007,8.949-8.95,8.949c-4.942,0-8.949-4.007-8.949-8.949L80.543,98.442C80.543,93.499,84.55,89.492,89.492,89.492z
+						 M218.36,35.811h-39.376V17.899C178.984,4.322,174.593,0,161.086,0L107.39,0C95.001,0,89.492,6.001,89.492,17.899v17.913H50.116
+						c-7.914,0-14.319,6.007-14.319,13.43c0,7.424,6.405,13.431,14.319,13.431H218.36c7.914,0,14.319-6.007,14.319-13.431
+						C232.679,41.819,226.274,35.811,218.36,35.811z M161.086,35.811h-53.695l0.001-17.913h53.695V35.811z"/>
+					</svg>
+				</sa:Buttonuismall>
+			</div>
+		</div>
+	</div>
+	<p class="alert alert--info u-mb0" ng:show="items.all.variable=='undefined' || !items.all.variable.length">No data to show</p>
+</div>

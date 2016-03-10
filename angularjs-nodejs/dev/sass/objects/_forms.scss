@@ -1,0 +1,81 @@
+%formelement {
+	@include font-size(15px, 2.5);
+
+	display: block;
+	width: 100%;
+	margin-bottom: $default-spacing-unit;
+	border: 1px solid $form-border-color;
+	border-radius: $border-radius;
+	outline: 0;
+}
+
+.form {
+	width: 25em;
+
+	@include mq($until: $mobile) {
+		width: 100%;
+		padding-right: $default-spacing-unit;
+	}
+}
+
+.form__datebtn {
+	float: left;
+	width: 20px;
+	height: 22px;
+	margin-top: 6px;
+}
+
+.input {
+	@extend %formelement;
+
+	padding: 0 $default-spacing-unit / 2;
+}
+
+.form__date {
+	width: 100%;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	&:hover {
+		svg {
+			fill: $brand-primary;
+		}
+	}
+}
+
+.form__dateinput {
+	width: 90%;
+	float: right;
+	position: relative;
+
+	@include mq($until: $mobile) {
+		width: 85%;
+	}
+}
+
+.form__datelabel {
+	@extend %formelement;
+
+	width: 96%;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	padding: 0 $default-spacing-unit / 2;
+	border: 0;
+	background: #fff;
+}
+
+.selectbox {
+	@extend %formelement;
+
+	padding: 0 5px;
+}
+
+.selectbox__select {
+	@include font-size(15px, 2.5);
+
+	width: 100%;
+	border: 0;
+	background: transparent;
+}

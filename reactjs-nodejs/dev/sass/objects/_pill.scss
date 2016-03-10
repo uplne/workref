@@ -1,0 +1,10 @@
+.info-pill {
+	@extend %pill;
+
+	display: inline-block;
+	padding: 0 1em;
+	line-height: 1.5;
+	background-color: $btn-default-bg;
+    color: $btn-default-color;
+    text-transform: uppercase;
+}

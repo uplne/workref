@@ -1,0 +1,321 @@
+/**
+ * Responsive dimensions
+ */
+/**
+ * RESET
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Give form elements some cursor interactions.
+ * From Harry Roberts - inuit.css
+ */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer; }
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none; }
+
+/**
+ * Mixin generate code for media queries.
+ *
+ * Dimensions in _settings.variables.scss
+ */
+/**
+ * Base styles
+ */
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 48px auto 0 auto;
+  padding: 48px 24px;
+  background-color: #fff; }
+  @media only screen and (max-width: 480px) {
+    body {
+      margin-top: 96px; } }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+svg {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: inline-block;
+  vertical-align: top; }
+
+/**
+ * Functions
+ */
+/**
+ * Convert number to EMs
+ * 
+ * @return {Number in ems}
+ */
+/**
+ * Math functions to help keep consistent sizes
+ */
+/**
+ * Mixins
+ */
+/**
+ * Font size with vertical rhytm.
+ * Thanks to Harry Roberts (inuit.css).
+ */
+/**
+ * This shall stop the z-index chaos
+ */
+@-webkit-keyframes iconIn {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); } }
+@keyframes iconIn {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); } }
+
+@-webkit-keyframes iconOut {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes iconOut {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@-webkit-keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.4; }
+  to {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0; } }
+
+@keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.4; }
+  to {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0; } }
+
+.u-mb0 {
+  margin-bottom: 0 !important; }
+
+.u-is-hidden {
+  display: none; }
+
+/**
+ * Grid system
+ *
+ **/
+.grid {
+  margin-left: -24px; }
+
+.grid__item, .grid__item--full {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-right: -4px;
+  padding-left: 24px;
+  box-sizing: border-box; }
+
+.grid__item--full {
+  padding-left: 0; }
+
+.grid-half {
+  width: 50%; }
+
+/**
+* Thirds
+*/
+.grid-one-third {
+  width: 33.333%; }
+
+.grid-two-thirds {
+  width: 66.666%; }
+
+/**
+ * Quarters
+ */
+.grid-quarter {
+  width: 25%; }
+
+/**
+ * Fifths
+ */
+.grid-fifth {
+  width: 20%; }
+
+.grid-twofifths {
+  width: 40%; }
+
+.grid-threefifts {
+  width: 60%; }
+
+.grid-fourfifths {
+  width: 80%; }
+
+.push {
+  margin: 24px 0; }
+
+.push--b {
+  margin-bottom: 24px; }
+
+h1, .alpha {
+  font-size: 2.375rem;
+  line-height: 1.1578947368;
+  font-weight: 200;
+  margin-bottom: 24px;
+  color: #303333; }
+
+.box {
+  padding: 24px;
+  margin-bottom: 24px; }
+
+.box--styled {
+  border: 1px solid #bfbfbf;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.05); }
+
+.input, .selectbox {
+  font-size: 0.9375rem;
+  line-height: 2.5;
+  border: 1px solid #bfbfbf;
+  border-radius: 3px; }
+
+.input {
+  padding: 4.8px 12px; }
+
+.selectbox {
+  padding-left: .9em; }
+
+.selectbox__select {
+  font-size: 0.9375rem;
+  line-height: 2.5;
+  width: 100%;
+  border: 0;
+  background: transparent; }
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 24px;
+  z-index: 1020;
+  background-color: #16a085;
+  border-bottom: 1px solid #138a72;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  text-align: center; }
+
+.header__wrap {
+  width: 960px;
+  height: 48px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 480px) {
+    .header__wrap {
+      width: 100%;
+      height: auto; } }
+
+.header__logo {
+  float: left;
+  position: relative;
+  width: 112px;
+  height: 48px; }
+  .header__logo svg {
+    margin-top: 4px; }
+  @media only screen and (max-width: 480px) {
+    .header__logo {
+      float: none;
+      display: block; } }
+
+.nav {
+  float: left;
+  margin-left: 24px;
+  height: 48px; }
+  @media only screen and (max-width: 480px) {
+    .nav {
+      float: none;
+      height: auto; } }
+
+.nav__link {
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  padding: 18px 0 0 18px;
+  color: #ffffff; }
+  .nav__link:hover, .nav__link.is-active {
+    color: #000; }
+  @media only screen and (max-width: 480px) {
+    .nav__link {
+      margin: 0 0 0 12px; } }
+
+.nav__cta {
+  font-size: 1.0625rem;
+  line-height: 1.2941176471;
+  margin: 15px 12px 0 24px;
+  vertical-align: top;
+  line-height: 1.5; }
+  @media only screen and (max-width: 480px) {
+    .nav__cta {
+      position: absolute;
+      top: 12px;
+      right: 12px; } }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.form {
+  background-color: #f2f2f2; }
+
+.form__row {
+  margin-bottom: 12px; }
+
+.form__label {
+  display: inline-block;
+  padding: 12px 12px 0;
+  vertical-align: baseline;
+  text-align: right; }

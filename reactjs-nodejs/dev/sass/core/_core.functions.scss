@@ -1,0 +1,29 @@
+/**
+ * Functions
+ */
+
+/**
+ * Convert number to EMs
+ * 
+ * @return {Number in ems}
+ */
+@if global-variable-exists(base-font-size) {
+	@function em($target, $context: $base-font-size) {
+	    @return ($target / $context) * 1em;
+	}
+}
+
+@else {
+	 @warn "'$base-font-size' is not defined."
+}
+
+/**
+ * Math functions to help keep consistent sizes
+ */
+@function quarter($number) {
+    @return round($number / 4);
+}
+
+@function halve($number) {
+    @return round($number / 2);
+}

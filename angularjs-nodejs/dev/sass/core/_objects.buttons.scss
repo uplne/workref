@@ -1,0 +1,67 @@
+/**
+ * BUTTONS
+ *
+ * PALLETE
+ * DIMENSIONS
+ * ENABLED
+ * DEFAULT ATOM
+ * LIBRARY ATOMS
+ */
+
+/**
+ * PALLETE
+ */
+$btn-default-color: #ffffff !default;
+$btn-default-spacing: halve($default-spacing-unit) !default;
+
+/**
+ * DIMENSIONS
+ */
+$btn-radius: 3px;
+
+/**
+ * DEFAULT ATOMS
+ */
+
+/**
+ * Default Nosferatu button style. If you want to create your own
+ * buttons copy this atom styles and make your own changes.
+ *
+ * Extending %btn abstraction.
+ */
+
+.btn,
+%btn {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 100%;
+    font-family: inherit;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    color: $btn-default-color;
+    border-radius: $btn-radius;
+
+    &,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn::-moz-focus-inner,
+%btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.btn--pill,
+%btn--pill {
+    border-radius: 1000px;
+}

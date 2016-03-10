@@ -1,0 +1,7 @@
+h1,.alpha {
+	@include font-size(38px);
+
+	font-weight: 200;
+	margin-bottom: $default-spacing-unit;
+	color: $brand-text-primary;
+}

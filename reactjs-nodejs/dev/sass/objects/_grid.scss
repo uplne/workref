@@ -1,0 +1,44 @@
+/**
+ * Grid system
+ *
+ **/
+
+.grid {
+    margin-left: -$default-spacing-unit;
+}
+
+.grid__item {
+	display: inline-block;
+	vertical-align: top;
+    width: 100%;
+    margin-right: -4px;
+    padding-left: $default-spacing-unit;
+    box-sizing: border-box;
+}
+
+.grid__item--full {
+    @extend .grid__item;
+
+    padding-left: 0;
+}
+
+.grid-half { width: 50%; }
+
+/**
+* Thirds
+*/
+.grid-one-third { width:33.333%; }
+.grid-two-thirds { width:66.666%; }
+
+/**
+ * Quarters
+ */
+.grid-quarter { width: 25%; }
+
+/**
+ * Fifths
+ */
+.grid-fifth      { width: 20%; }
+.grid-twofifths  { width: 40%; }
+.grid-threefifts { width: 60%; }
+.grid-fourfifths { width: 80%; }

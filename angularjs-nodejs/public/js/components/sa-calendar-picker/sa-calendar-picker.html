@@ -1,0 +1,21 @@
+<div class="datepicker box box--styled">
+    <table class="datepicker__table">
+        <thead class="datepicker__header">
+            <tr>
+                <td colspan="5"><span>{{month}}</span></td>
+                <td><i class="datepicker__arrow datepicker__arrow--left" ng:click="previous()"></i></td>
+                <td><i class="datepicker__arrow datepicker__arrow--right" ng:click="next()"></i></td>
+            </tr>
+        </thead>
+        <tbody class="datepicker__week">
+            <tr>
+                <td ng:repeat="dayName in weekDays track by $index"><b class="datepicker__day">{{dayName}}</b></td>
+            </tr>
+            <tr class="week" ng:repeat="week in weeks">
+                <td class="datepicker__day" ng:class="{ 'datepicker__day--today': day.isToday, 'datepicker__day--notthismonth': !day.isCurrentMonth}" ng:click="updateDate(day); $event.stopPropagation();" ng:repeat="day in week.days">{{day.number}}</td>
+            </tr>
+        </div>
+            </tr>
+        </tbody>
+    </table>
+</div>

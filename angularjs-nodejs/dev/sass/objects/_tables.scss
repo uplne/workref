@@ -1,0 +1,86 @@
+.table {
+	padding: 0 $default-spacing-unit;
+	text-align: left;
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin-bottom: $default-spacing-unit;
+	table-layout: fixed;
+
+	th,
+	td {
+		@include font-size(14px);
+
+		vertical-align: middle;
+		line-height: 2;
+		padding: $default-spacing-unit / 3 $default-spacing-unit;
+		color: $brand-delta;
+
+		&.table__ui {
+			padding: $default-spacing-unit / 3 0;
+		}
+	}
+
+	@include mq($until: $mobile) {
+		padding: 0;
+
+		tr {
+			position: relative;
+		}
+
+		th,
+		td {
+			display: inline-block;
+			padding: 0 $default-spacing-unit / 3;
+		}
+
+		td:first-child {
+			width: 100%;
+		}
+	}
+}
+
+.table__ui {
+	@include mq($until: $mobile) {
+		float: right;
+	}
+}
+
+.table__head {
+	background-color: $brand-bg-light;
+
+	th {
+		color: lighten($brand-delta, 20%);
+	}
+
+	@include mq($until: $mobile) {
+		display: none;
+	}
+}
+
+.table__body {
+	max-height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.table--simpleborder {
+	tr {
+		border-bottom: 1px solid $border-color;
+	}
+
+	thead tr {
+		border: 0;
+	}
+}
+
+.table--strips {
+	tbody {
+		tr:nth-of-type(odd) {
+			background-color: $table-strip-bg;
+		}
+	}
+}
+
+.table--full {
+	width: 100%;
+}

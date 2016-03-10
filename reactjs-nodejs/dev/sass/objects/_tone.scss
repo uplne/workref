@@ -1,0 +1,15 @@
+.tone {
+	width: 100%;
+	background-color: $brand-bg-light;
+	text-align: center;
+	margin-bottom: $default-spacing-unit * 2;
+}
+
+.tone__message {
+	padding: $default-spacing-unit 0;
+	margin: 0 auto;
+
+	@include mq($until: $mobile-landscape-w) {
+		line-height: 1.5;
+	}
+}

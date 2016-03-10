@@ -1,0 +1,9 @@
+.box {
+	padding: $default-spacing-unit;
+	margin-bottom: $default-spacing-unit;
+}
+
+.box--styled {
+	border: 1px solid $brand-border;
+	box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, .05);
+}

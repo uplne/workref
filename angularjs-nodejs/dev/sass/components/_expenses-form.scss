@@ -1,0 +1,15 @@
+.formBox {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: $default-spacing-unit * 5;
+	top: 0;
+	background-color: #fff;
+
+	@include mq($until: $mobile) {
+		left: 0;
+		z-index: $zindex-modal;
+		margin: 0;
+		padding: $default-spacing-unit 0;
+	}
+}

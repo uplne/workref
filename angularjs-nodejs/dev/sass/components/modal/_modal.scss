@@ -1,0 +1,21 @@
+%fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.modal {
+	@extend %fixed;
+
+	z-index: $zindex-modal + 1;
+}
+
+.modal--overlay {
+	@extend %fixed;
+
+	z-index: $zindex-modal;
+	background-color: #000;
+	opacity: .5;
+}

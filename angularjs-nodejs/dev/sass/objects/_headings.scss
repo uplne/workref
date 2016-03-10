@@ -1,0 +1,42 @@
+h1, .alpha {
+	@include font-size(40px);
+
+	font-weight: 200;
+	color: $brand-primary;
+	margin: 0 0 $default-spacing-unit;
+}
+
+h2, .beta {
+	@include font-size(22px);
+
+	font-weight: normal;
+	color: $heading;
+	margin: 0 0 $default-spacing-unit;
+}
+
+h3, .gamma {
+	@include font-size(18px);
+
+	font-weight: normal;
+	color: $heading;
+	margin: 0 0 $default-spacing-unit / 2;
+}
+
+h4, .delta {
+	@include font-size(18px);
+
+	font-weight: normal;
+	text-transform: uppercase;
+	color: $brand-primary;
+	margin: 0 0 $default-spacing-unit / 2;
+}
+
+.headingsinfo {
+	@include font-size(12px);
+
+	color: $heading-info;
+}
+
+.headings--right {
+	float: right;
+}

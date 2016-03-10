@@ -1,0 +1,14 @@
+<div class="grid__item welcome" ng:controller="WelcomeCtrl">
+	<h1>{{welcomeMessage}}</h1>
+	<sa:quotelio></sa:quotelio>
+</div>
+<div class="grid__item">
+	<div class="grid u-boxOrder">
+		<div class="grid__item grid-half m-g-full u-boxOrder-1">
+			<sa:Graphincomeexpense graph-title="Income/Expense" chart-data="monthlyTotals"></sa:Graphincomeexpense>
+		</div>
+		<div class="grid__item grid-half m-g-full u-boxOrder-2">
+			<sa:Graphsavings graph-title="monthly savings" chart-data="savings"></sa:Graphsavings>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="grid__item">
+	<h2>Income <span class="headingsinfo">Your income</span></h2>
+</div>
+<div class="grid__item">
+	<div class="grid u-boxOrder">
+		<div class="grid__item grid-half m-g-full  u-boxOrder-2">
+			<sa:Savings></sa:Savings>
+			<sa:Tablevariable><h3>Variable income <span class="headings--right">{{date}}</span></h3></sa:Tablevariable>
+			<sa:Tablefixed><h3>Fixed income <span class="headings--right">All</span></h3></sa:Tablefixed>
+		</div>
+		<div class="grid__item grid-half m-g-full  u-boxOrder-1">
+			<div class="grid">
+				<sa:Total type="monthly" data="items.totals.monthly">This month</sa:Total>
+				<sa:Total type="yearly" data="items.totals.yearly">This year</sa:Total>
+			</div>
+		</div>
+	</div>
+</div>

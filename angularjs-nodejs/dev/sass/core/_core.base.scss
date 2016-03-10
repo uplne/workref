@@ -1,0 +1,27 @@
+/**
+ * Base styles
+ */ 
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+body {
+	margin: $default-spacing-unit auto;
+	padding: 0 $default-spacing-unit;
+	background-color: #fff;
+}
+
+.body {
+	background-color: $brand-bg-light;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}

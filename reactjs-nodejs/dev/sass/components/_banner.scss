@@ -1,0 +1,57 @@
+.banner {
+	height: 445px;
+	position: relative;
+	background: transparent url('../images/banner3.jpg') 50% 50% no-repeat;
+
+	@include mq($until: $mobile-landscape-w) {
+		height: 350px;
+		text-align: center;
+	}
+}
+
+.banner__mainimg {
+	position: absolute;
+	top: 15%;
+	left: 45%;
+}
+
+.banner__phoneimg {
+	position: absolute;
+	top: 57%;
+	left: 45%;
+}
+
+.banner__heading {
+	@include font-size(45px, 1.2);
+
+	width: 30%;
+	color: #fff;
+	font-weight: 400;
+	position: absolute;
+	top: 30%;
+	right: 2%;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+
+	@include mq($until: $mobile-landscape-w) {
+		@include font-size(30px);
+
+		width: 100%;
+		position: static;
+		margin: 0 auto;
+		padding-top: 70px;
+	}
+}
+
+.banner__cta {
+	@include font-size(24px);
+
+	position: absolute;
+	top: 70%;
+	right: 17.8%;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.11);
+
+	@include mq($until: $mobile-landscape-w) {
+		position: static;
+		margin: $default-spacing-unit * 2 auto 0 auto;
+	}
+}

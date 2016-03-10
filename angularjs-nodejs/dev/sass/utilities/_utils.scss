@@ -1,0 +1,22 @@
+.u-noscroll {
+	overflow: hidden;
+	position: fixed;
+
+	@include mq($until: $mobile) {
+		margin: 0;
+	}
+}
+
+%u-ellipsis,
+.u-ellipsis {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// Hide on mobile
+.u-m-hide {
+	@include mq($until: $mobile) {
+		display: none !important;
+	}
+}

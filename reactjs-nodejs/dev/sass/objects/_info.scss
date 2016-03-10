@@ -1,0 +1,8 @@
+.info {
+	@extend %btn--pill;
+
+	padding: 0 $default-spacing-unit / 2;
+	background-color: $brand-primary;
+	color: #fff;
+	font-style: italic;
+}

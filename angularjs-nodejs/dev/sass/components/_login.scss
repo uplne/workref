@@ -1,0 +1,44 @@
+.login {
+	width: 40em;
+	position: absolute;
+	top: 10%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+
+	@include mq($until: $mobile) {
+		width: auto;
+	}
+}
+
+.login__logo {
+	height: 6em;
+	background-image: url('../images/savelioLogo.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: $default-spacing-unit / 2;
+}
+
+.login__motto {
+	@include font-size(20px);
+
+	font-weight: 200;
+	color: $text-primary;
+	margin-bottom: $default-spacing-unit * 2;
+	text-align: center;
+}
+
+.login__btns {
+	background-color: #fff;
+
+	a {
+		display: block;
+	}
+}
+
+.login__terms {
+	@include mq($until: $mobile) {
+		margin-top: $default-spacing-unit;
+		text-align: center;
+	}
+}

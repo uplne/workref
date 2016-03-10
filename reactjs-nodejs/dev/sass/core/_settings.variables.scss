@@ -1,0 +1,20 @@
+$base-font-size: 16px;
+$base-line-height: 22px;
+
+$default-spacing-unit: 24px;
+
+$input-spacing: 3px;
+$border-radius: 3px;
+
+/**
+ * Responsive dimensions
+ */
+$base-w: 1200px;
+$tablet-w: 960px;
+$mobile-portrait-w: 320px;
+$mobile-landscape-w: 480px;
+
+$nosferatu-btn-pill: true;
+
+// HEADER
+$main-header-height: $default-spacing-unit * 2;

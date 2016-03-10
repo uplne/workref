@@ -1,0 +1,18 @@
+.form {
+	background-color: $brand-light-grey;
+}
+
+.form__row {
+	margin-bottom: $default-spacing-unit / 2;
+}
+
+.form__label {
+	display: inline-block;
+	padding: $default-spacing-unit / 3 $default-spacing-unit / 2 0;
+	vertical-align: baseline;
+	text-align: right;
+}
+
+.form__rightalign {
+	text-align: right;
+}

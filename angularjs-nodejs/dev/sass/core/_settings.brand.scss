@@ -1,0 +1,48 @@
+$brand-primary: #DF4400;          // Main brand color - orange
+$brand-secondary: #3498db;        // Blue - mostly buttons, CTA
+$brand-secondary-active: #2980b9; // CTA active state
+$brand-delta: #666666;            // Text color
+$brand-border: #e0e0e0;           // Sidebar border, table borders
+$brand-bg-light: #f1f1f1;         // Light bg (sidebar bg)
+
+// Default button colors
+$brand-light-active: #e6e6e6;
+$brand-light-border: #ccc;
+$brand-light-border-active: #adadad;
+
+// TEXT
+$text-primary: $brand-delta;
+$text-secondary: $brand-primary;
+$text-light: #989898;
+
+// HEADINGS
+$heading: $brand-delta;
+$heading-info: $brand-delta;
+
+// BUTTONS
+$btn-default-bg: #fff;
+$btn-default-bg-hover: $brand-light-active;
+$btn-default-color: $brand-delta;
+$btn-border: $brand-light-border;
+
+$btn-primary: $brand-secondary;
+$btn-primary-hover: $brand-secondary;
+
+// TABLES TODO: check
+$border-color: $brand-border;
+$table-strip-bg: $brand-primary;
+$thead-bg: $brand-primary;
+
+// FORMS
+$form-border-color: #b3b3b3;
+
+// NAV BAR
+$navbar-bg: $brand-bg-light;
+$navbar-border: $brand-border;
+
+// SOCIAL
+$google: #DD4B39;
+
+// GRAPHS
+$income: #95cd3d;
+$expense: #99d6eb;

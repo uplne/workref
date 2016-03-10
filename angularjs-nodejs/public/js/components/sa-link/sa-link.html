@@ -1,0 +1,6 @@
+<a ui:sref="{{sref}}" ui:sref:active="is-active" class="btn btn--medium btn--icon btn--uilarge btn--link sidebar__link" title="{{title}}" ng:click="clickHandler()">
+	<span class="btn__linkWrap">
+		<svg ng:attr-view_box="{{viewbox || '0 0 32 32'}}" ng:transclude></svg>
+	</span>
+	<span ng:class="{'btn__ripple': toggleClass}"></span>
+</a>

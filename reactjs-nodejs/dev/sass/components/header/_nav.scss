@@ -1,0 +1,42 @@
+.nav {
+	float: left;
+	margin-left: $default-spacing-unit;
+	height: $main-header-height;
+
+	@include mq($until: $mobile-landscape-w) {
+		float: none;
+		height: auto;
+	}
+}
+
+.nav__link {
+	@include font-size(16px, 1);
+
+	display: inline-block;
+	text-decoration: none;
+	padding: 18px 0 0 18px;
+	color: #ffffff;
+
+	&:hover,
+	&.is-active {
+		color: #000;
+	}
+
+	@include mq($until: $mobile-landscape-w) {
+		margin: 0 0 0 $default-spacing-unit / 2;
+	}
+}
+
+.nav__cta {
+	@include font-size(17px);
+
+	margin: 15px $default-spacing-unit / 2 0 $default-spacing-unit;
+	vertical-align: top;
+	line-height: 1.5;
+
+	@include mq($until: $mobile-landscape-w) {
+		position: absolute;
+		top: $default-spacing-unit / 2;
+		right: $default-spacing-unit / 2;
+	}
+}

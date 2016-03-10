@@ -1,0 +1,475 @@
+/**
+ * Responsive dimensions
+ */
+/**
+ * RESET
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Give form elements some cursor interactions.
+ * From Harry Roberts - inuit.css
+ */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer; }
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none; }
+
+/**
+ * Mixin generate code for media queries.
+ *
+ * Dimensions in _settings.variables.scss
+ */
+/**
+ * Base styles
+ */
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 48px auto 0 auto;
+  padding: 48px 24px;
+  background-color: #fff; }
+  @media only screen and (max-width: 480px) {
+    body {
+      margin-top: 96px; } }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+svg {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: inline-block;
+  vertical-align: top; }
+
+/**
+ * Functions
+ */
+/**
+ * Convert number to EMs
+ * 
+ * @return {Number in ems}
+ */
+/**
+ * Math functions to help keep consistent sizes
+ */
+/**
+ * Mixins
+ */
+/**
+ * Font size with vertical rhytm.
+ * Thanks to Harry Roberts (inuit.css).
+ */
+/**
+ * This shall stop the z-index chaos
+ */
+@-webkit-keyframes iconIn {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); } }
+@keyframes iconIn {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); } }
+
+@-webkit-keyframes iconOut {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes iconOut {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@-webkit-keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.4; }
+  to {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0; } }
+
+@keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.4; }
+  to {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0; } }
+
+.u-mb0 {
+  margin-bottom: 0 !important; }
+
+.u-mr {
+  margin-right: 24px; }
+
+.u-mr--half {
+  margin-right: 12px; }
+
+.u-is-hidden {
+  display: none; }
+
+/**
+ * Grid system
+ *
+ **/
+.grid {
+  margin-left: -24px; }
+
+.grid__item, .grid__item--full {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-right: -4px;
+  padding-left: 24px;
+  box-sizing: border-box; }
+
+.grid__item--full {
+  padding-left: 0; }
+
+.grid-half {
+  width: 50%; }
+
+/**
+* Thirds
+*/
+.grid-one-third {
+  width: 33.333%; }
+
+.grid-two-thirds {
+  width: 66.666%; }
+
+/**
+ * Quarters
+ */
+.grid-quarter {
+  width: 25%; }
+
+/**
+ * Fifths
+ */
+.grid-fifth {
+  width: 20%; }
+
+.grid-twofifths {
+  width: 40%; }
+
+.grid-threefifts {
+  width: 60%; }
+
+.grid-fourfifths {
+  width: 80%; }
+
+.push {
+  margin: 24px 0; }
+
+.push--b {
+  margin-bottom: 24px; }
+
+h1, .alpha {
+  font-size: 2.375rem;
+  line-height: 1.1578947368;
+  font-weight: 200;
+  margin-bottom: 24px;
+  color: #303333; }
+
+.box {
+  padding: 24px;
+  margin-bottom: 24px; }
+
+.box--styled {
+  border: 1px solid #bfbfbf;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.05); }
+
+.input, .select, .selectbox {
+  font-size: 0.9375rem;
+  line-height: 2;
+  background-color: #ffffff;
+  border: 1px solid #bfbfbf;
+  border-radius: 3px; }
+
+.input {
+  padding: 4px 8px; }
+
+.select {
+  height: 36px;
+  padding: 4px 8px; }
+
+.selectbox {
+  padding-left: .9em; }
+
+.selectbox__select {
+  font-size: 0.9375rem;
+  line-height: 2.5;
+  width: 100%;
+  border: 0;
+  background: transparent; }
+
+.radiogroup {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+
+.radio-wrap {
+  position: relative;
+  z-index: 2; }
+
+.radio {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden; }
+  .radio:not(:checked) + label:before {
+    border: 2px solid #bfbfbf;
+    background-color: transparent; }
+  .radio:checked + label:before {
+    border: 2px solid #00bcd4;
+    background-color: #00bcd4; }
+
+.radio__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 28.8px;
+  margin-right: 12px;
+  cursor: pointer;
+  line-height: 28px; }
+  .radio__label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: 250ms ease; }
+
+.btn {
+  padding: 9px 18px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #fff;
+  border-color: #bfbfbf;
+  color: #fff;
+  vertical-align: middle;
+  border-radius: 2px; }
+
+.btn--xsmall {
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 2.6666666667px 5.3333333333px; }
+
+.btn--small {
+  font-size: 0.875rem;
+  line-height: 1.5714285714;
+  padding: 4.8px 9.6px; }
+
+.btn--large {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  padding: 12px 24px; }
+
+.btn--primary {
+  font-size: 1rem;
+  line-height: 1.375;
+  color: #fff;
+  background-color: #27B5E1;
+  transition: 500ms ease;
+  border: 1px solid #27B5E1; }
+  .btn--primary:hover {
+    background-color: #1da7d1; }
+
+.btn--icon {
+  background-color: transparent; }
+  .btn--icon svg {
+    height: 65%;
+    fill: #fff;
+    transition: background easeIn 250ms;
+    vertical-align: bottom; }
+  .btn--icon:hover {
+    background-color: transparent; }
+    .btn--icon:hover svg {
+      fill: #16a085; }
+
+.btn--ui {
+  width: 31.2px;
+  height: 31.2px;
+  padding: 0;
+  border: 0; }
+
+.btn--uilarge {
+  width: 38.4px;
+  height: 38.4px;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+  box-sizing: content-box; }
+  .btn--uilarge svg {
+    fill: #16a085;
+    vertical-align: middle; }
+  .btn--uilarge:hover {
+    background-color: #16a085;
+    border: 1px solid #bfbfbf; }
+    .btn--uilarge:hover svg {
+      fill: #fff; }
+  .btn--uilarge.is-disabled {
+    border-color: grey;
+    transition: none; }
+    .btn--uilarge.is-disabled svg,
+    :hover .btn--uilarge.is-disabled {
+      fill: grey;
+      background-color: #fff; }
+
+.btn__linkWrap {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.btn--link {
+  line-height: 2.5; }
+
+.btn__ripple {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 38.4px;
+  height: 38.4px;
+  background: black;
+  opacity: 0;
+  -webkit-animation: ripple-animation 500ms;
+          animation: ripple-animation 500ms; }
+
+.btn__text {
+  font-size: 1.0625rem;
+  line-height: 1.2941176471;
+  margin-left: .5em;
+  vertical-align: inherit; }
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 24px;
+  z-index: 1020;
+  background-color: #16a085;
+  border-bottom: 1px solid #138a72;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  text-align: center; }
+
+.header__wrap {
+  width: 960px;
+  height: 48px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 480px) {
+    .header__wrap {
+      width: 100%;
+      height: auto; } }
+
+.header__logo {
+  float: left;
+  position: relative;
+  width: 112px;
+  height: 48px; }
+  .header__logo svg {
+    margin-top: 4px; }
+  @media only screen and (max-width: 480px) {
+    .header__logo {
+      float: none;
+      display: block; } }
+
+.nav {
+  float: left;
+  margin-left: 24px;
+  height: 48px; }
+  @media only screen and (max-width: 480px) {
+    .nav {
+      float: none;
+      height: auto; } }
+
+.nav__link {
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  padding: 18px 0 0 18px;
+  color: #ffffff; }
+  .nav__link:hover, .nav__link.is-active {
+    color: #000; }
+  @media only screen and (max-width: 480px) {
+    .nav__link {
+      margin: 0 0 0 12px; } }
+
+.nav__cta {
+  font-size: 1.0625rem;
+  line-height: 1.2941176471;
+  margin: 15px 12px 0 24px;
+  vertical-align: top;
+  line-height: 1.5; }
+  @media only screen and (max-width: 480px) {
+    .nav__cta {
+      position: absolute;
+      top: 12px;
+      right: 12px; } }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.form {
+  background-color: #f2f2f2; }
+
+.form__row {
+  margin-bottom: 12px; }
+
+.form__label {
+  display: inline-block;
+  padding: 8px 12px 0;
+  vertical-align: baseline;
+  text-align: right; }
+
+.form__rightalign {
+  text-align: right; }

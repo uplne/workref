@@ -1,0 +1,14 @@
+@include mq($until: $mobile) {
+	.u-boxOrder {
+		display: flex;
+		flex-direction: column;	
+	}
+
+	.u-boxOrder-1 {
+		order: 1;
+	}
+
+	.u-boxOrder-2 {
+		order: 2;
+	}
+}

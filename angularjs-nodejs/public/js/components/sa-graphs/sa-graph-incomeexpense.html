@@ -1,0 +1,9 @@
+<div class="box box--styled graph js-graph">
+	<h4>{{graphTitle}}</h4>
+	<p class="alert alert--info" ng:hide="hasData">No data to show</p>
+	<canvas id="incomeexpensegraph" class="graph__element--xlong"></canvas>
+	<div class="legend" ng:show="hasData">
+		<p class="legend__box legend__box--income">income</p>
+		<p class="legend__box legend__box--expense">expense</p>
+	</div>
+</div>

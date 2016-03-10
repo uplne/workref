@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Savelio - your personal finance management</title>
+        <meta name="description" content="Savelio - personal finance, expenses, income">
+        <meta name="googlebot" content="noindex, nofollow" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="cleartype" content="on">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link rel="stylesheet" href="<%= assets %>/css/savelio<%=assetsCSS%>">
+        <script>
+            window.config = {
+                user: {
+                    firstname: '<%= config.user.firstname %>',
+                    lastname: '<%= config.user.lastname %>'
+                },
+                msgs: {
+                    welcome: '<%= config.messages.welcome %>'
+                }
+            };
+        </script>
+    </head>
+    <body class="{{bodyClasses}}">
+        <div class="sidebar" ng:cloak>
+            <div class="sidebar__logo">
+                <img src="<%= assets %>/images/savelio-white.png" />
+            </div>
+            <div class="box sidebar__action" ng:show="$state.current.name !== 'dashboard'" >
+                <sa:Button viewbox="0 0 286.376 286.376" title="Add expense">
+                    <path d="M268.477,125.29H161.086V17.899c0-9.885-8.013-17.898-17.898-17.898
+        s-17.898,8.013-17.898,17.898v107.39H17.9c-9.885,0-17.9,8.013-17.9,17.898c0,9.885,8.015,17.898,17.9,17.898h107.39v107.39
+        c0,9.885,8.013,17.898,17.898,17.898s17.898-8.013,17.898-17.898v-107.39h107.391c9.885,0,17.898-8.014,17.898-17.898
+        C286.376,133.303,278.362,125.29,268.477,125.29z"/>
+                </sa:Button>
+            </div>
+            <div class="box sidebar__nav">
+                <sa:Link sref="dashboard" title="Dashboard">
+                    <path d="M16 2c8.837 0 16 7.163 16 16 0 6.025-3.331 11.271-8.25 14h-15.499c-4.92-2.729-8.25-7.975-8.25-14 0-8.837 7.163-16 16-16zM25.060 27.060c2.42-2.42 3.753-5.637 3.753-9.060h-2.813v-2h2.657c-0.219-1.406-0.668-2.755-1.33-4h-3.327v-2h2.009c-0.295-0.368-0.611-0.722-0.949-1.060-1.444-1.444-3.173-2.501-5.060-3.119v2.178h-2v-2.658c-0.656-0.102-1.324-0.155-2-0.155s-1.344 0.053-2 0.155v2.658h-2v-2.178c-1.887 0.617-3.615 1.674-5.060 3.119-0.338 0.338-0.654 0.692-0.949 1.060h2.009v2h-3.327c-0.662 1.245-1.111 2.594-1.33 4h2.657v2h-2.813c0 3.422 1.333 6.64 3.753 9.060 0.335 0.335 0.685 0.648 1.049 0.94h6.011l1.143-16h1.714l1.143 16h6.011c0.364-0.292 0.714-0.606 1.049-0.94z"></path>
+                </sa:Link>
+                <sa:Link sref="expense" title="Expense">
+                    <path d="M26 2h-20l-6 6v21c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-21l-6-6zM20 20v6h-8v-6h-6l10-8 10 8h-6zM4.828 6l2-2h18.343l2 2h-22.343z"></path>
+                </sa:Link>
+                <sa:Link sref="income" title="Income">
+                    <path d="M26 2h-20l-6 6v21c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-21l-6-6zM16 26l-10-8h6v-6h8v6h6l-10 8zM4.828 6l2-2h18.343l2 2h-22.343z"></path>
+                </sa:Link>
+            </div>
+        </div>
+        <div class="container grid" ng:cloak>
+            <ui:view></ui:view>
+        </div>
+        <script src="public/jspm_packages/system.js"></script>
+        <script src="public/config.js"></script>
+        <script>
+            System.import("js/app");
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-69146316-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>

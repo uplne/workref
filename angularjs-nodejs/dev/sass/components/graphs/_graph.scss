@@ -1,0 +1,78 @@
+$graph-size: 200px;
+
+.graph {
+	width: 100%;
+	min-height: 240px;
+	position: relative;
+}
+
+.graph__element {
+	width: $graph-size;
+	height: $graph-size;
+}
+
+.graph__element--long {
+	width: $graph-size * 2;
+	height: $graph-size * 1.5;
+
+	@include mq($until: 400px) {
+		width: $graph-size + 22;
+		height: $graph-size;
+	}
+}
+
+.graph__element--xlong {
+	width: $graph-size * 2;
+	height: $graph-size;
+
+	@include mq($until: 400px) {
+		width: $graph-size + 22;
+		height: $graph-size;
+	}
+}
+
+.graph--doughnut {
+	width: 100%;
+	min-height: 300px;
+}
+
+.graph__labels {
+	text {
+		@include font-size(14px);
+
+		fill: $text-primary;
+	}
+}
+
+.graph__legend {
+	position: absolute;
+	top: $default-spacing-unit * 2.5;
+	left: $graph-size + $default-spacing-unit * 3;
+
+	@include mq($until: 400px) {
+		position: static;
+		display: block;
+		margin-top: $default-spacing-unit;
+	}
+
+	@include mq($from: $mobile, $until: 1100px) {
+		position: static;
+		display: block;
+		margin-top: $default-spacing-unit;
+	}
+}
+
+.graph__list {
+	@include font-size(13px);
+
+	color: $text-primary;
+}
+
+.graph__colorindicator {
+	display: inline-block;
+	vertical-align: middle;
+	width: $default-spacing-unit / 2;
+	height: $default-spacing-unit / 2;
+	margin-right: $default-spacing-unit / 3;
+	border-radius: $border-radius;
+}

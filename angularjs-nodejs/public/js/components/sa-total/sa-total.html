@@ -1,0 +1,12 @@
+<div class="grid__item grid-half">
+	<div class="box box--styled total">
+		<h2 class="total__heading">{{total.total || '0.00'}}</h2>
+		<p class="total__sub" ng:transclude></p>
+		<div class="total__row">
+			<span class="total__text">Variable</span><span class="total__price">{{total.variable || '0.00'}}</span>
+		</div>
+		<div class="total__row">
+			<span class="total__text">Fixed</span><span class="total__price">{{total.fixed || '0.00'}}</span>
+		</div>
+	</div>
+</div>

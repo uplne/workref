@@ -1,0 +1,28 @@
+/**
+ * Mixin generate code for media queries.
+ *
+ * Dimensions in _settings.variables.scss
+ */
+@mixin mq($from: false, $until: false) {
+
+    // No min-width
+    @if $from == false {
+        @media only screen and (max-width: $until) {
+             @content;
+        }
+    }
+
+    // No max-width
+    @else if $until == false {
+        @media only screen and (min-width: $from) {
+             @content;
+        }
+    }
+
+    // From min-width to max-width
+    @else {
+        @media only screen and (min-width: ($from)) and (max-width: $until - 1) {
+            @content;
+        }
+    }
+}

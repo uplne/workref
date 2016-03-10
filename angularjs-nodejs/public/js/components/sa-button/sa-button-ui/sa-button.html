@@ -1,0 +1,4 @@
+<button ng:class="{'is-disabled': !isActive}" ng:disabled="!isActive" ng:init="isActive=true" class="btn btn--medium btn--icon btn--uilarge" type="submit" title="{{title}}" ng:click="clickHandler()">
+	<svg ng:attr-view_box="{{viewbox || '0 0 32 32'}}" ng:transclude></svg>
+	<span ng:class="{'btn__ripple': toggleClass}"></span>
+</button>

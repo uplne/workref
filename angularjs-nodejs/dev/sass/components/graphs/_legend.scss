@@ -1,0 +1,66 @@
+.legend {
+	position: absolute;
+	top: $default-spacing-unit * 2;
+	right: $default-spacing-unit * 2;
+
+	@include mq($until: $mobile) {
+		position: static;
+		margin-top: $default-spacing-unit;
+	}
+}
+
+.legend__box {
+	@include font-size(18px);
+
+	font-weight: 200;
+	color: $text-primary;
+	text-transform: uppercase;
+	margin-bottom: $default-spacing-unit / 2;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		width: $default-spacing-unit / 3;
+		height: $default-spacing-unit + 6;
+		margin-right: $default-spacing-unit / 5;
+	}
+
+	@include mq($until: $mobile) {
+		display: inline-block;
+		width: 49%;
+	}
+}
+
+.legend__field {
+	@include font-size(30px, 1);
+
+	margin-left: $default-spacing-unit / 6;
+	display: inline-block;
+	font-weight: 200;
+	color: $text-primary;
+
+	@include mq($until: $mobile) {
+		display: block;
+		float: none;
+	}
+}
+
+.legend__box--income {
+	&:before {
+		background-color: $income;
+	}
+}
+
+.legend__box--expense {
+	&:before {
+		background-color: $expense;
+	}
+}
+
+.legend__info {
+	@include font-size(18px);
+
+	text-transform: uppercase;
+	display: block;
+}
